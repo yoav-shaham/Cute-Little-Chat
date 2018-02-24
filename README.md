@@ -1,6 +1,7 @@
 # Cute-Little-Chat
 cool eh.
-##Description
+
+## Description
 A small little chat as a assignment from Forter with a small simple bot built on the skeleton of a "Skeleton app with Node.js + express + angular".
 
 ## Requirements
