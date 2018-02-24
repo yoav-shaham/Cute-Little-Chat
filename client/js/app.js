@@ -14,12 +14,10 @@ app.controller('appController', ['$scope', 'getHistory', "$http", "$window", fun
 	$scope.messages = [];
 	$scope.toggle = "gg";//turning on toggle 
 	getHistory.get().success(function (ResponseData) {
-		console.debug(ResponseData.length)
 		if (ResponseData.length != 2) {
 
 
 			var data = ResponseData;
-			console.debug(a.length)
 			var i = 0;
 			$scope.messages = [];
 			while (i < data.length - 1) {
@@ -44,13 +42,11 @@ app.controller('appController', ['$scope', 'getHistory', "$http", "$window", fun
 
 
 	$scope.sendMessage = function () {//sending the message and updating history
-		console.debug("heylll")
 		// Don't send an empty message 
 		if (!$scope.messageContent || $scope.messageContent === '') {
 			return;
 		}
 		else {
-			console.debug("hello");
 			var data = { name: $scope.MyName, message: $scope.messageContent }
 			$scope.history = $http.post('/SendMessage', data).then(function (ResponseData) {
 				var i = 0;
@@ -88,7 +84,6 @@ app.controller('appController', ['$scope', 'getHistory', "$http", "$window", fun
 		console.log(typeof a)
 
 		var data = a;
-		console.debug(a.length)
 		$scope.messages = [];
 		var i = 0;
 		while (i < data.length - 1) {
@@ -113,7 +108,6 @@ app.controller('appController', ['$scope', 'getHistory', "$http", "$window", fun
 		$scope.$apply(function () {//teeling angular it was updated
 			$scope.messages
 		})
-		console.debug(typeof a)
 	};
 	$scope.setUsername = function () {//sending post HTTP packet to server saying the new username
 		$scope.MyName = $scope.username;
