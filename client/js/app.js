@@ -20,7 +20,7 @@ app.controller('appController', ['$scope', 'getHistory', "$http", "$window", fun
 			var data = ResponseData;
 			var i = 0;
 			$scope.messages = [];
-			while (i < data.length - 1) {
+			while (i < data.length ) {
 				if (data[i].includes("Hey there MR.Messeeks here look at me I've got the answer for you oooooooweeeeee:")) {
 					$scope.messages.push({ "name": "Mr.Meeseeks", "message": data[i] })
 				}
@@ -52,7 +52,7 @@ app.controller('appController', ['$scope', 'getHistory', "$http", "$window", fun
 				var i = 0;
 				data = ResponseData.data
 				$scope.messages = [];
-				while (i < data.length - 1) {
+				while (i < data.length) {
 					if (data[i].includes("Hey there MR.Messeeks here look at me I've got the answer for you oooooooweeeeee:")) {
 						$scope.messages.push({ "name": "Mr.Meeseeks", "message": data[i] })
 					}
@@ -86,7 +86,7 @@ app.controller('appController', ['$scope', 'getHistory', "$http", "$window", fun
 		var data = a;
 		$scope.messages = [];
 		var i = 0;
-		while (i < data.length - 1) {
+		while (i < data.length ) {
 			if (data[i].includes("Hey there MR.Messeeks here look at me I've got the answer for you oooooooweeeeee:")) {
 				$scope.messages.push({ "name": "Mr.Meeseeks", "message": data[i] })
 			}
